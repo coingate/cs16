@@ -1,0 +1,54 @@
+[en]
+SWITCHING_TEAMS = ==== Switching Teams ====
+ROUNDS1 = ROUNDS
+ROUNDS1_CHAT = [NOTICE] Rounds
+ROUNDS2 = ROUNDS
+ROUNDS2_CHAT = [NOTICE] Rounds
+LIVE_NOTICE = [NOTICE]After [LIVE ON 3] Will Play On New Team
+LIVE = [NOTICE] LIVE LIVE LIVE Good Luck & Have Fun!!!
+NEW_TEAM = [NOTICE] Your Team has been changed, please notice your mission target.
+GOOD_GAME = Team Switched, Have a Good Game.
+
+[tc]
+SWITCHING_TEAMS = ==== 互換隊伍 ====
+ROUNDS1 = 上半場，當前回合
+ROUNDS1_CHAT = [NOTICE] 目前為上半場，當前回合
+ROUNDS2 = 下半場，當前回合
+ROUNDS2_CHAT = [NOTICE] 目前為下半場，當前回合
+LIVE_NOTICE = [NOTICE] lo3後開始遊戲
+LIVE = [NOTICE] LIVE LIVE LIVE 刷新完後下半場即將開始!!!
+NEW_TEAM = [NOTICE] 您的隊伍已經更換，請注意任務目標已更改!
+GOOD_GAME = [NOTICE] 隊伍更換完成,祝您遊戲愉快
+
+[es] 
+SWITCHING_TEAMS = ==== Mezclando equipos ==== 
+ROUNDS1 = RONDAS 
+ROUNDS1_CHAT = [Noticia] Rondas 
+ROUNDS2 = RONDAS 
+ROUNDS2_CHAT = [Noticia] Rondas 
+LIVE_NOTICE = [Noticia] Despues de [VALE EN 3] jugaras en un nuevo equipo 
+LIVE = [Noticia] VALE VALE VALE Buena suerte y diviertanse!!! 
+NEW_TEAM = [Noticia] Tu equipo ha sido cambiado, por favor informa el objetivo de tu mision. 
+GOOD_GAME = Equipos mezclados, tengan un buen juego.
+
+[fr]
+SWITCHING_TEAMS = ==== Changement d'équipe ====
+ROUNDS1 = ROUNDS
+ROUNDS1_CHAT = [REMARQUE] Rounds
+ROUNDS2 = ROUNDS
+ROUNDS2_CHAT = [REMARQUE] Rounds
+LIVE_NOTICE = [REMARQUE]Après [LIVE ON 3] Will Play On New Team
+LIVE = [REMARQUE] CA JOUE, bonne chance!!!
+NEW_TEAM = [REMARQUE] Vous avez changé d'équipe, regardez-donc sur qui vous tirez.
+GOOD_GAME = Équipes changées, bon jeu.
+
+[de]
+SWITCHING_TEAMS = ==== Wechsle Teams ====
+ROUNDS1 = RUNDEN
+ROUNDS1_CHAT = [BEACHTE] Runden
+ROUNDS2 = ROUNDS
+ROUNDS2_CHAT = [BEACHTE] Runden
+LIVE_NOTICE = [BEACHTE] Nach [3 LEBEN] wirst du in einem neuen Team spielen
+LIVE = [NOTICE] LEBEN LEBEN LEBEN Viel Glueck & hab Spass!!!
+NEW_TEAM = [BEACHTE] Dein Team wurde geaendert. Bitte achte auf deine Missionsziel.
+GOOD_GAME = Team gewechselt, hab ein gutes Spiel!
