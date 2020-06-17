@@ -41,6 +41,18 @@ if [ -n "${ADMIN_STEAM}" ]; then
     echo "\"STEAM_${ADMIN_STEAM}\" \"\"  \"abcdefghijklmnopqrstu\" \"ce\"" >> "/opt/hlds/cstrike/addons/amxmodx/configs/users.ini"
 fi
 
+if [ -n "${ADMIN_STEAM_2}" ]; then
+    echo "\"STEAM_${ADMIN_STEAM_2}\" \"\"  \"abcdefghijklmnopqrstu\" \"ce\"" >> "/opt/hlds/cstrike/addons/amxmodx/configs/users.ini"
+fi
+
+if [ -n "${ADMIN_STEAM_3}" ]; then
+    echo "\"STEAM_${ADMIN_STEAM_3}\" \"\"  \"abcdefghijklmnopqrstu\" \"ce\"" >> "/opt/hlds/cstrike/addons/amxmodx/configs/users.ini"
+fi
+
+if [ -n "${ADMIN_STEAM_4}" ]; then
+    echo "\"STEAM_${ADMIN_STEAM_4}\" \"\"  \"abcdefghijklmnopqrstu\" \"ce\"" >> "/opt/hlds/cstrike/addons/amxmodx/configs/users.ini"
+fi
+
 set > "${CONFIG_FILE}"
 
 exec "${EXECUTABLE}" "${OPTIONS[@]}" "${EXTRA_OPTIONS[@]}"
