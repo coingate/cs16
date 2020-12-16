@@ -22,6 +22,7 @@ HLDS_MAP?="de_dust2"
 .PHONY: build
 build:
 	docker buildx build -f Dockerfile \
+	--pull \
 	--platform=linux/386 \
   --no-cache=$(DOCKER_NO_CACHE) \
 	-t $(IMAGE_NAME):$(IMAGE_TAG) \
