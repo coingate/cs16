@@ -37,6 +37,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           platforms: linux/386
+          load: true
           tags: ghcr.io/coingate/cs16:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
