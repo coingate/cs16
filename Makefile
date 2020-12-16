@@ -9,7 +9,7 @@ STEAM_PASSWORD?=""
 DOCKER_NO_CACHE?="false"
 
 # Publish options
-DOCKER_PUBLISH_NAME?="minvs1/cs16"
+DOCKER_PUBLISH_NAME?="ghcr.io/coingate/cs16"
 DOCKER_PUBLISH_TAG?=$(IMAGE_TAG)
 
 # Test tools
