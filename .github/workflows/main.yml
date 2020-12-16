@@ -33,11 +33,22 @@ jobs:
           username: minvs1
           password: ${{ secrets.CONTAINER_REGISTRY_PAT }}
 
-      - name: Push to GitHub Packages
+      - name: Build Docker Image
         uses: docker/build-push-action@v2
         with:
+          build-args: |
+            steam_user=anonymous
+            steam_password=
           context: .
-          push: true
           tags: ghcr.io/coingate/cs16:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
+
+      - name: Test Image
+        run: make test
+        env:
+          IMAGE_NAME: ghcr.io/coingate/cs16
+          IMAGE_TAG: latest 
+
+      - name: Push to GitHub Packages
+        run: docker push ghcr.io/coingate/cs16:latest
