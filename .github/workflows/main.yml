@@ -1,0 +1,43 @@
+name: Publish Docker
+on:
+  push:
+    branches: [master]
+
+jobs:
+  docker:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Cache Docker layers
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: minvs1
+          password: ${{ secrets.CONTAINER_REGISTRY_PAT }}
+
+      - name: Push to GitHub Packages
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/coingate/cs16:latest
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
