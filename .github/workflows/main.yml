@@ -36,7 +36,7 @@ jobs:
       - name: Build Docker Image
         uses: docker/build-push-action@v2
         with:
-          platform: linux/386
+          platforms: linux/386
           tags: ghcr.io/coingate/cs16:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
