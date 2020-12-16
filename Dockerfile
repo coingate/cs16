@@ -1,11 +1,18 @@
-FROM debian:buster-slim
+FROM ubuntu:16.04
 
 ARG steam_user=anonymous
 ARG steam_password=
 ARG metamod_version=1.20
 ARG amxmod_version=1.8.2
 
-RUN apt update && apt install -y curl
+RUN apt-get update && \
+    apt-get install -y software-properties-common && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN add-apt-repository multiverse && \
+    dpkg --add-architecture i386 && \
+    apt update && \
+    apt install -y curl
 
 # Install SteamCMD
 RUN mkdir -p /opt/steam && cd /opt/steam && \
