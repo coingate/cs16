@@ -36,13 +36,11 @@ jobs:
       - name: Build Docker Image
         uses: docker/build-push-action@v2
         with:
-          build-args: |
-            steam_user=anonymous
-            steam_password=
-          context: .
+          platform: linux/386
           tags: ghcr.io/coingate/cs16:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
+          context: .
 
       - name: Test Image
         run: make test

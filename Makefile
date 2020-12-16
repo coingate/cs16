@@ -21,7 +21,9 @@ HLDS_MAP?="de_dust2"
 
 .PHONY: build
 build:
-	docker build -f Dockerfile --no-cache=$(DOCKER_NO_CACHE) \
+	docker buildx build -f Dockerfile \
+	--platform=linux/386 \
+  --no-cache=$(DOCKER_NO_CACHE) \
 	-t $(IMAGE_NAME):$(IMAGE_TAG) \
 	--build-arg steam_user=$(STEAM_USER) \
 	--build-arg steam_password=$(STEAM_PASSWORD) .
