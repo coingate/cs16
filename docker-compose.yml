@@ -1,0 +1,15 @@
+version: '3'
+services:
+  cs16:
+    container_name: cs16
+    image: ghcr.io/coingate/cs16:latest
+    ports:
+      - '26900:26900/udp'
+      - '27020:27020/udp'
+      - '27015:27015/udp'
+      - '27015:27015'
+    environment:
+      - ADMIN_STEAM=0:1:119070837
+      - ADMIN_STEAM_2=0:1:476720895
+      - SERVER_NAME=CoinGate
+      - SERVER_PASSWORD=bitcoinz123
